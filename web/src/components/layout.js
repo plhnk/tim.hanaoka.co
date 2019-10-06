@@ -1,11 +1,16 @@
 import React from 'react'
 import Header from './header'
+import Helmet from 'react-helmet'
 
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
 const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitle }) => (
   <>
+    <Helmet>
+      <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,500i,700,700i|Work+Sans:400,500,700,800&display=swap' rel='stylesheet' />
+      />
+    </Helmet>
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
     <div className={styles.content}>{children}</div>
     <footer className={styles.footer}>
