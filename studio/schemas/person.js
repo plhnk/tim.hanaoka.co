@@ -13,6 +13,21 @@ export default {
       type: 'string'
     },
     {
+      name: 'title',
+      title: 'Title',
+      type: 'string'
+    },
+    {
+      name: 'company',
+      title: 'Company',
+      type: 'string'
+    },
+    {
+      name: 'phone',
+      title: 'Phone',
+      type: 'string'
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
