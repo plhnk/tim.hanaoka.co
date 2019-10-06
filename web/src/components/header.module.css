@@ -55,6 +55,7 @@
 
 .nav {
   display: none;
+  font-family: var(--font-primary);
 
   @nest & ul {
     margin: 0;
@@ -95,8 +96,6 @@
 
     @nest & ul {
       list-style: none;
-      display: flex;
-      justify-content: flex-end;
     }
 
     @nest & ul li a {

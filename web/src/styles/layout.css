@@ -1,7 +1,7 @@
 @import './vars.css';
 
 html {
-  font-family: Alegreya, serif;
+  font-family: var(--font-secondary);
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
 }
@@ -10,7 +10,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-primary);
 }
 
 body {
