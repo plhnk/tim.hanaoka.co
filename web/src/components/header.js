@@ -12,11 +12,13 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
         <Link to='/'>{siteTitle}</Link>
       </h1>
 
-      <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
-        <Icon symbol='hamburger' />
-      </button>
+      <div>
+        <Icon symbol='phone' />
+        <Icon symbol='email' />
+        <Icon symbol='document' />
+      </div>
 
-      <nav className={cn(styles.nav, showNav && styles.showNav)}>
+      <nav className={styles.nav}>
         <ul>
           <li>
             <Link to='/about/'>About</Link>

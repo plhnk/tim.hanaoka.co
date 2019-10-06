@@ -17,7 +17,7 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitl
     <div className={styles.pageWrapper}>
       <div className={styles.header}>
         <Header
-          siteTitle={siteTitle}
+          siteTitle={companyInfo.name}
           onHideNav={onHideNav}
           onShowNav={onShowNav}
           showNav={showNav}

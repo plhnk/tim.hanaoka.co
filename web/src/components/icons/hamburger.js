@@ -1,6 +1,6 @@
 import React from 'react'
 
-const strokeStyle = { vectorEffect: 'non-scaling-stroke' }
+const strokeStyle = { vectorEffect: 'non-scaling-stroke', strokeWidth:'2', strokeLinecap: 'round', strokeLinejoin: 'round' }
 
 const HamburgerIcon = () => (
   <svg
