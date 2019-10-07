@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
-const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitle }) => (
+const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav }) => (
   <>
     <Helmet>
       <link
@@ -17,7 +17,6 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav, siteTitl
     <div className={styles.pageWrapper}>
       <div className={styles.header}>
         <Header
-          siteTitle={companyInfo.name}
           onHideNav={onHideNav}
           onShowNav={onShowNav}
           showNav={showNav}

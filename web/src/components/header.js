@@ -1,15 +1,14 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Icon from './icons'
-import { cn } from '../lib/helpers'
 
 import styles from './header.module.css'
 
-const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
+const Header = () => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
       <h1 className={styles.branding}>
-        <Link to='/'>{siteTitle}</Link>
+        Timothy Hanaoka
       </h1>
 
       <div>
