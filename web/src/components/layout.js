@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './header'
 import Helmet from 'react-helmet'
+import { Link } from 'gatsby'
 
 import '../styles/layout.css'
 import styles from './layout.module.css'
@@ -9,19 +10,28 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav }) => (
   <>
     <Helmet>
       <link
-        href='https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,500i,700,700i|Work+Sans:400,500,700,800&display=swap'
+        href='https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,500i,700,700i|Work+Sans:400,500,600,700,800&display=swap'
         rel='stylesheet'
       />
       />
     </Helmet>
     <div className={styles.pageWrapper}>
       <div className={styles.header}>
-        <Header
-          onHideNav={onHideNav}
-          onShowNav={onShowNav}
-          showNav={showNav}
-        />
+        <Header onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
       </div>
+      <nav className={styles.nav}>
+        <ul>
+          <li>
+            <Link to='/about/'>About</Link>
+          </li>
+          <li>
+            <Link to='/projects/'>Projects</Link>
+          </li>
+          <li>
+            <Link to='/contact/'>Contact</Link>
+          </li>
+        </ul>
+      </nav>
       <div className={styles.body}>
         {children}
         <footer className={styles.footer}>

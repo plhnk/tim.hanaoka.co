@@ -1,4 +1,3 @@
-import { Link } from 'gatsby'
 import React from 'react'
 import Icon from './icons'
 
@@ -7,29 +6,22 @@ import styles from './header.module.css'
 const Header = () => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
+      <img className={styles.headshot} src='https://placehold.it/100x100' />
       <h1 className={styles.branding}>
-        Timothy Hanaoka
+        <span className={styles.firstName}>Timothy</span> Hanaoka
       </h1>
 
-      <div>
-        <Icon symbol='phone' />
-        <Icon symbol='email' />
-        <Icon symbol='document' />
-      </div>
-
-      <nav className={styles.nav}>
-        <ul>
-          <li>
-            <Link to='/about/'>About</Link>
-          </li>
-          <li>
-            <Link to='/projects/'>Projects</Link>
-          </li>
-          <li>
-            <Link to='/contact/'>Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      <ul className={styles.contactInfo}>
+        <li>
+          <a className={styles.contactLink} href='#'><Icon symbol='phone' /> <span className={styles.label}>310.525.9584</span></a>
+        </li>
+        <li>
+          <a className={styles.contactLink} href='#'><Icon symbol='email' /> <span className={styles.label}>tim@hanaoka.co</span></a>
+        </li>
+        <li>
+          <a className={styles.contactLink} href='#'><Icon symbol='document' /> <span className={styles.label}>Resume</span></a>
+        </li>
+      </ul>
     </div>
   </div>
 )

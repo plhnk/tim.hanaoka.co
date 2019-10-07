@@ -10,16 +10,27 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
 
-  @media (--media-min-small) {
-    padding: 1.5em 1.5em;
+  @media (--media-min-medium) {
+    text-align: initial;
+    align-items: flex-start;
   }
 }
 
 .branding {
-  font-size: inherit;
+  font-size: 3em;
   margin: 0;
   flex: 1;
+  line-height: 0.9;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 300;
 
   @nest & a {
     display: inline-block;
@@ -35,71 +46,54 @@
   }
 }
 
-.toggleNavButton {
-  appearance: none;
-  font-size: 25px;
-  border: none;
-  background: none;
-  margin: 0;
-  padding: calc(14 / 17 / 2 * 1rem);
-  outline: none;
-
-  & svg {
-    display: block;
+.headshot {
+  border-radius: 50%;
+  margin: 20vh 3rem 3rem 3rem;
+  @media (--media-min-medium) {
+    margin: 20vh 0 2rem -0.4rem;
   }
-/* 
-  @media (--media-min-small) {
-    display: none;
-  } */
 }
 
-.nav {
-  display: none;
+.firstName {
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+
+.contactLink {
+  text-decoration: none;
+  color: white;
   font-family: var(--font-primary);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  @nest & svg {
+    vertical-align: middle;
+  }
+}
 
-  @nest & ul {
-    margin: 0;
-    padding: 0;
+.contactInfo {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: flex;
+
+  @nest & li {
+    padding: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    @nest & .label {
+      display: none;
+    }
   }
 
-  @nest & ul li a {
+  @media (--media-min-medium) {
     display: block;
-    color: inherit;
-    text-decoration: none;
-  }
-
-  @media (hover: hover) {
-    @nest & ul li a:hover {
-      text-decoration: underline;
-    }
-  }
-
-  @media (--media-max-small) {
-    position: absolute;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    left: 0;
-    right: 0;
-    top: 4rem;
-
-    @nest & ul {
-      padding: 1rem 0;
-    }
-
-    @nest & ul li a {
-      padding: 0.5rem 1.5rem;
-    }
-  }
-
-  @media (--media-min-small) {
-    display: block;
-
-    @nest & ul {
-      list-style: none;
-    }
-
-    @nest & ul li a {
-      padding: 0.5rem;
+    @nest & li {
+      padding: 0.5rem 0;
+      margin: 0.5rem 0;
+      @nest & .label {
+        display: inline;
+      }
     }
   }
 }
