@@ -36,7 +36,6 @@
   @media (--media-min-medium) {
     grid-area: 1 / 2 / 2 / 3;
   }
-  display: none;
   font-family: var(--font-primary);
 
   @nest & ul {
