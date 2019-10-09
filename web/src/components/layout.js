@@ -20,22 +20,22 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav }) => (
       <div className={styles.header}>
         <Header onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
       </div>
+      <div className={styles.navContainer}>
+        <nav className={styles.nav}>
+          <ul>
+            <li>
+              <Link to='/about/'>About</Link>
+            </li>
+            <li>
+              <Link to='/projects/'>Projects</Link>
+            </li>
+            <li>
+              <Link to='/contact/'>Contact</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <div className={styles.body}>
-        <Container>
-          <nav className={styles.nav}>
-            <ul>
-              <li>
-                <Link to='/about/'>About</Link>
-              </li>
-              <li>
-                <Link to='/projects/'>Projects</Link>
-              </li>
-              <li>
-                <Link to='/contact/'>Contact</Link>
-              </li>
-            </ul>
-          </nav>
-        </Container>
         {children}
         <Container>
           <footer className={styles.footer}>
