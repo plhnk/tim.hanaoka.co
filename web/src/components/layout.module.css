@@ -22,8 +22,9 @@
   );
   background-size: cover;
   background-position: center;
-  /* background-blend-mode: multiply; */
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
   color: white;
   grid-area: 1 / 1 / 2 / 2;
   @media (--media-min-medium) {

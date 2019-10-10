@@ -3,21 +3,21 @@
 
 .root {
   position: relative;
-  z-index: 100;
+  display: flex;
+  align-items: center;
+  @media (--media-min-medium) {
+    align-items: flex-start;
+  }
 }
 
 .wrapper {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
   text-align: center;
-  padding: 2rem;
 
   @media (--media-min-medium) {
+    margin: 10vh 2rem 0 0;
     text-align: initial;
     align-items: flex-start;
   }
@@ -34,6 +34,10 @@
   @nest & h1 {
     letter-spacing: 0.1em;
     font-weight: 300;
+    margin: 0;
+    @media (--media-min-medium) {
+      margin: initial;
+    }
 
     @media (hover: hover) {
       @nest &:hover {
@@ -50,7 +54,7 @@
 }
 
 .headshotWrapper {
-  margin: 20vh 3rem 3rem 3rem;
+  margin: 4rem 3rem 2rem 3rem;
   border-radius: 50%;
   z-index: 100;
   overflow: hidden;
@@ -58,7 +62,7 @@
   height: 10rem;
   width: 10rem;
   @media (--media-min-medium) {
-    margin: 20vh 0 2rem -0.4rem;
+    margin: 2rem 0 2rem -0.4rem;
   }
   @nest & .headshot {
     height: 100%;
