@@ -42,8 +42,8 @@ const Layout = ({ children, myInfo, onHideNav, onShowNav, showNav }) => (
             <div className={styles.footerWrapper}>
               <div className={styles.siteInfo}>
                 <div>
-                  Copyright © {new Date().getFullYear()} {myInfo.name}.
-                  All&nbsp;rights&nbsp;reserved.
+                  Copyright © {new Date().getFullYear()} {myInfo.shortName}
+                  {' '}{myInfo.lastName}. All&nbsp;rights&nbsp;reserved.
                 </div>
                 <div>
                   Built by <a href='https://paul.hanaoka.co'>Big Brother</a> with&nbsp;{''}

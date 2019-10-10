@@ -9,7 +9,10 @@ const Header = ({ myInfo }) => (
     <div className={styles.wrapper}>
       <img className={styles.headshot} src='https://placehold.it/100x100' />
       <Link to='/' className={styles.branding}>
-        <h1>{myInfo.name}</h1>
+        <h1>
+          <span className={styles.firstName}>{myInfo.firstName}</span>
+          {myInfo.lastName}
+        </h1>
       </Link>
 
       <ul className={styles.contactInfo}>

@@ -8,7 +8,9 @@ const query = graphql`
       title
     }
     myInfo: sanityMyInfo {
-      name
+      firstName
+      lastName
+      shortName
       address1
       address2
       zipCode

@@ -9,8 +9,18 @@ export default {
   icon: FaRebel,
   fields: [
     {
-      name: 'name',
-      title: 'My name',
+      name: 'firstName',
+      title: 'First Name',
+      type: 'string'
+    },
+    {
+      name: 'shortName',
+      title: 'Short First name',
+      type: 'string'
+    },
+    {
+      name: 'lastName',
+      title: 'Last Name',
       type: 'string'
     },
     {
