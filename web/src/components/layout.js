@@ -24,10 +24,10 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav }) => (
         <nav className={styles.nav}>
           <ul>
             <li>
-              <Link to='/about/'>About</Link>
+              <Link to='/'>Projects</Link>
             </li>
             <li>
-              <Link to='/projects/'>Projects</Link>
+              <Link to='/about/'>About</Link>
             </li>
             <li>
               <Link to='/contact/'>Contact</Link>
