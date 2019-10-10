@@ -37,7 +37,7 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav }) => (
       </div>
       <div className={styles.body}>
         {children}
-        <Container>
+        <Container extraStyle={{ borderBottom: '2px solid red' }}>
           <footer className={styles.footer}>
             <div className={styles.footerWrapper}>
               <div className={styles.siteInfo}>
