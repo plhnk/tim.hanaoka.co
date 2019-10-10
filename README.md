@@ -30,7 +30,7 @@ This examples combines [Gatsby](https://www.gatsbyjs.org/) site generation with 
 
 **Sanity Studio with a schema for**
 
-- 🏢 Company info
+- 🏢 My Info
 - 📃 Pages
 - 👨🏼‍🎨 Projects
 - 👩🏾‍💻 People

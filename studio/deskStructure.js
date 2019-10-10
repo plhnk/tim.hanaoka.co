@@ -2,7 +2,7 @@ import S from '@sanity/desk-tool/structure-builder'
 import { MdBusiness, MdSettings } from 'react-icons/md'
 import { FaFile } from 'react-icons/fa'
 
-const hiddenTypes = ['category', 'companyInfo', 'page', 'person', 'project', 'siteSettings']
+const hiddenTypes = ['category', 'myInfo', 'page', 'person', 'project', 'siteSettings']
 
 export default () =>
   S.list()
@@ -18,12 +18,12 @@ export default () =>
         )
         .icon(MdSettings),
       S.listItem()
-        .title('Company Info')
+        .title('My Info')
         .child(
           S.editor()
-            .id('companyInfo')
-            .schemaType('companyInfo')
-            .documentId('companyInfo')
+            .id('myInfo')
+            .schemaType('myInfo')
+            .documentId('myInfo')
         )
         .icon(MdBusiness),
       S.listItem()

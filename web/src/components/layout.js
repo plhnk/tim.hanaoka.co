@@ -7,7 +7,7 @@ import Container from '../components/container'
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
-const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav }) => (
+const Layout = ({ children, myInfo, onHideNav, onShowNav, showNav }) => (
   <>
     <Helmet>
       <link
@@ -42,7 +42,7 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav }) => (
             <div className={styles.footerWrapper}>
               <div className={styles.siteInfo}>
                 <div>
-                  Copyright © {new Date().getFullYear()} {companyInfo.name}.
+                  Copyright © {new Date().getFullYear()} {myInfo.name}.
                   All&nbsp;rights&nbsp;reserved.
                 </div>
                 <div>

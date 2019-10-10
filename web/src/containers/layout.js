@@ -7,7 +7,7 @@ const query = graphql`
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
     }
-    companyInfo: sanityCompanyInfo(_id: { regex: "/(drafts.|)companyInfo/" }) {
+    myInfo: sanityMyInfo(_id: { regex: "/(drafts.|)myInfo/" }) {
       name
       address1
       address2
@@ -35,16 +35,16 @@ function LayoutContainer (props) {
             'Missing "Site settings". Open the studio at http://localhost:3333 and add "Site settings" data'
           )
         }
-        if (!data.companyInfo) {
+        if (!data.myInfo) {
           throw new Error(
-            'Missing "Company info". Open the studio at http://localhost:3333 and add "Company info" data'
+            'Missing "My Info". Open the studio at http://localhost:3333 and add "My Info" data'
           )
         }
         return (
           <Layout
             {...props}
             showNav={showNav}
-            companyInfo={data.companyInfo}
+            myInfo={data.myInfo}
             siteTitle={data.site.title}
             onHideNav={handleHideNav}
             onShowNav={handleShowNav}

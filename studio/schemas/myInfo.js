@@ -1,22 +1,27 @@
-import { MdBusiness } from 'react-icons/md'
+import { FaRebel } from "react-icons/fa";
 
 export default {
-  name: 'companyInfo',
-  title: 'Company Info',
+  name: 'myInfo',
+  title: 'My Info',
   type: 'document',
   liveEdit: false,
   __experimental_actions: ['update', 'publish' /* 'create', 'delete' */],
-  icon: MdBusiness,
+  icon: FaRebel,
   fields: [
     {
       name: 'name',
-      title: 'Company name',
+      title: 'My name',
       type: 'string'
     },
     {
       name: 'email',
       title: 'Email',
       type: 'email'
+    },
+    {
+      name: 'phone',
+      title: 'Phone',
+      type: 'string'
     },
     {
       name: 'address1',
