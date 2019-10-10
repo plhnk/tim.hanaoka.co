@@ -40,20 +40,16 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav }) => (
         <Container>
           <footer className={styles.footer}>
             <div className={styles.footerWrapper}>
-              <div className={styles.companyAddress}>
-                {companyInfo && (
-                  <div>
-                    {companyInfo.zipCode} {companyInfo.city}
-                    {companyInfo.country && <span>, {companyInfo.country}</span>}
-                  </div>
-                )}
-              </div>
-
               <div className={styles.siteInfo}>
-                © {new Date().getFullYear()}, Built with <a href='https://www.sanity.io'>Sanity</a>{' '}
-                &amp;
-                {` `}
-                <a href='https://www.gatsbyjs.org'>Gatsby</a>
+                <div>
+                  Copyright © {new Date().getFullYear()} {companyInfo.name}. All rights reserved.
+                </div>
+                <div>
+                  Built by <a href='https://paul.hanaoka.co'>Big Brother</a> with{' '}
+                  <a href='https://www.sanity.io'>Sanity</a> &amp;
+                  {` `}
+                  <a href='https://www.gatsbyjs.org'>Gatsby</a>.
+                </div>
               </div>
             </div>
           </footer>
