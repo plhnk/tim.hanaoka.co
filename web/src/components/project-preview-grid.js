@@ -8,13 +8,7 @@ function ProjectPreviewGrid (props) {
   return (
     <div className={styles.root}>
       {props.title && (
-        <h2 className={styles.headline}>
-          {props.browseMoreHref ? (
-            <Link to={props.browseMoreHref}>{props.title}</Link>
-          ) : (
-            props.title
-          )}
-        </h2>
+        <h2 className={styles.headline}>{props.title}</h2>
       )}
       <ul className={styles.grid}>
         {props.nodes &&
@@ -24,19 +18,13 @@ function ProjectPreviewGrid (props) {
             </li>
           ))}
       </ul>
-      {props.browseMoreHref && (
-        <div className={styles.browseMoreNav}>
-          <Link to={props.browseMoreHref}>Browse more</Link>
-        </div>
-      )}
     </div>
   )
 }
 
 ProjectPreviewGrid.defaultProps = {
   title: '',
-  nodes: [],
-  browseMoreHref: ''
+  nodes: []
 }
 
 export default ProjectPreviewGrid

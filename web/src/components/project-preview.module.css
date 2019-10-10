@@ -2,6 +2,43 @@
   display: block;
   color: inherit;
   text-decoration: none;
+  margin: 1rem;
+  padding: 1rem;
+  background: var(--color-white);
+  position: relative;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+  @nest &:hover {
+    transform: translateY(-0.1rem);
+    transition: transform 0.2s ease-in-out;
+    @nest &:after {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+    @nest & .seeMoreLinks {
+      opacity: 1;
+      transform: translateX(0);
+      transition: 0.1s all 0.3s ease-in-out;
+    }
+  }
+  @nest &:after {
+    transition: opacity 0.3s ease-in-out;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    box-shadow: 0 0.4rem 2rem -0.5rem rgba(var(--accent), 0.4);
+  }
+}
+
+.seeMoreLinks {
+  opacity: 0;
+  transform: translateX(-0.5rem);
+  transition: 0.2s all 0.4s ease-in-out;
 }
 
 .title {
@@ -24,9 +61,11 @@
 }
 
 .title {
+  color: var(--color-neutral-7);
   @media (hover: hover) {
     @nest .root:hover & {
-      text-decoration: underline;
+      color: var(--color-accent);
+      /* text-decoration: underline; */
     }
   }
 }
