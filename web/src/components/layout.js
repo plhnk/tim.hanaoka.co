@@ -42,12 +42,12 @@ const Layout = ({ children, companyInfo, onHideNav, onShowNav, showNav }) => (
             <div className={styles.footerWrapper}>
               <div className={styles.siteInfo}>
                 <div>
-                  Copyright © {new Date().getFullYear()} {companyInfo.name}. All rights reserved.
+                  Copyright © {new Date().getFullYear()} {companyInfo.name}.
+                  All&nbsp;rights&nbsp;reserved.
                 </div>
                 <div>
-                  Built by <a href='https://paul.hanaoka.co'>Big Brother</a> with{' '}
-                  <a href='https://www.sanity.io'>Sanity</a> &amp;
-                  {` `}
+                  Built by <a href='https://paul.hanaoka.co'>Big Brother</a> with&nbsp;{''}
+                  <a href='https://www.sanity.io'>Sanity</a>&nbsp;&amp;&nbsp;{``}
                   <a href='https://www.gatsbyjs.org'>Gatsby</a>.
                 </div>
               </div>

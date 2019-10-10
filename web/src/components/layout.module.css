@@ -45,7 +45,9 @@
 }
 
 .footerContainer {
-  background: red;
+  @media (--media-max-medium) {
+    border-bottom: solid 4px var(--color-accent);
+  }
 }
 
 footer {
