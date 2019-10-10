@@ -1,5 +1,6 @@
 import React from 'react'
 import Icon from './icons'
+import Link from './link.js'
 
 import styles from './header.module.css'
 
@@ -7,9 +8,9 @@ const Header = ({ myInfo }) => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
       <img className={styles.headshot} src='https://placehold.it/100x100' />
-      <h1 className={styles.branding}>
-        <span className={styles.firstName}>Timothy</span> Hanaoka
-      </h1>
+      <Link to='/' className={styles.branding}>
+        <h1>{myInfo.name}</h1>
+      </Link>
 
       <ul className={styles.contactInfo}>
         <li>
