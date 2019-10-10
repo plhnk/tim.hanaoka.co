@@ -68,6 +68,7 @@
   letter-spacing: 0.12em;
   @nest & svg {
     vertical-align: middle;
+    margin-bottom: 0.2em;
   }
 }
 
