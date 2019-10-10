@@ -1,6 +1,6 @@
 import React from 'react'
 import SEO from '../components/seo'
-import Container from '../components/layout'
+import Container from '../components/container'
 import Layout from '../containers/layout'
 
 import { responsiveTitle1 } from '../components/typography.module.css'
