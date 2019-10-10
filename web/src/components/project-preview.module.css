@@ -19,6 +19,11 @@
       opacity: 1;
       transform: translateX(0);
       transition: 0.1s all 0.3s ease-in-out;
+      @nest & .arrow {
+        transform: translateX(0.2rem);
+        color: var(--color-accent);
+        transition: 0.5s all 0.8s cubic-bezier(0, 1.6, 0.6, 1.8);
+      }
     }
   }
   @nest &:after {
@@ -39,10 +44,20 @@
   opacity: 0;
   transform: translateX(-0.5rem);
   transition: 0.2s all 0.4s ease-in-out;
+  font-size: 1.5rem;
+  margin: initial initial 2rem -0.2rem;
+  color: var(--color-black);
+  @nest & .arrow {
+    vertical-align: middle;
+    color: var(--color-neutral-7);
+    transform: translateX(0);
+    transition: 0.4s transform 0.4s ease-in-out;
+  }
 }
 
 .title {
   composes: responsiveTitle1 from './typography.module.css';
+  margin-bottom: 0.1em;
 }
 
 .leadMediaThumb {

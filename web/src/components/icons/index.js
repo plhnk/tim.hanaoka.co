@@ -16,7 +16,7 @@ function Icon (props) {
     case 'document':
       return <DocumentIcon />
     case 'arrowRight':
-      return <ArrowRightIcon />
+      return <ArrowRightIcon {...props} />
     default:
       return <span>Unknown icon: {props.symbol}</span>
   }

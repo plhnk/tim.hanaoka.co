@@ -23,7 +23,7 @@ function ProjectPreview (props) {
       </div>
       <h2 className={cn(responsiveTitle1, styles.title)}>{props.title}</h2>
       <div className={styles.seeMoreLinks}>
-        <Icon symbol='arrowRight' /> See Project Details
+        <Icon className={styles.arrow} symbol='arrowRight' /> See Project Details
       </div>
     </Link>
   )
