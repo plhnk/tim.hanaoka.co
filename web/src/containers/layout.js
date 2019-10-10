@@ -4,14 +4,16 @@ import Layout from '../components/layout'
 
 const query = graphql`
   query SiteTitleQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+    site: sanitySiteSettings {
       title
     }
-    myInfo: sanityMyInfo(_id: { regex: "/(drafts.|)myInfo/" }) {
+    myInfo: sanityMyInfo {
       name
       address1
       address2
       zipCode
+      phone
+      email
       city
       country
     }

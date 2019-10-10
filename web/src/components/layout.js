@@ -18,7 +18,7 @@ const Layout = ({ children, myInfo, onHideNav, onShowNav, showNav }) => (
     </Helmet>
     <div className={styles.pageWrapper}>
       <div className={styles.header}>
-        <Header onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
+        <Header myInfo={myInfo} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
       </div>
       <div className={styles.navContainer}>
         <nav className={styles.nav}>
