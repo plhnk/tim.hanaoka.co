@@ -1,13 +1,25 @@
 import React from 'react'
 import Icon from './icons'
 import Link from './link.js'
+import { buildImageObj } from '../lib/helpers'
+import { imageUrlFor } from '../lib/image-url'
 
 import styles from './header.module.css'
 
 const Header = ({ myInfo }) => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
-      <img className={styles.headshot} src='https://placehold.it/100x100' />
+      <div className={styles.headshotWrapper}>
+        <img
+          src={imageUrlFor(buildImageObj(myInfo.headshot))
+            .width(160)
+            .height(160)
+            .fit('crop')
+            .url()}
+          alt={myInfo.headshot.alt}
+          className={styles.headshot}
+        />
+      </div>
       <Link to='/' className={styles.branding}>
         <h1>
           <span className={styles.firstName}>{myInfo.firstName}</span>

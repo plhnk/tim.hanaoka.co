@@ -15,7 +15,14 @@
 }
 
 .header {
-  background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+  background-image: linear-gradient(
+    to top,
+    hsla(193, 100%, 49%, 0.8) 0%,
+    hsla(217, 100%, 46%, 0.9) 100%
+  );
+  background-size: cover;
+  background-position: center;
+  /* background-blend-mode: multiply; */
   padding: 1rem;
   color: white;
   grid-area: 1 / 1 / 2 / 2;

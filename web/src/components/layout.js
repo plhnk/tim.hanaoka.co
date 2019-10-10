@@ -3,6 +3,8 @@ import Header from './header'
 import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 import Container from '../components/container'
+import { buildImageObj } from '../lib/helpers'
+import { imageUrlFor } from '../lib/image-url'
 
 import '../styles/layout.css'
 import styles from './layout.module.css'
@@ -17,7 +19,15 @@ const Layout = ({ children, myInfo, onHideNav, onShowNav, showNav }) => (
       />
     </Helmet>
     <div className={styles.pageWrapper}>
-      <div className={styles.header}>
+      <div
+        className={styles.header}
+        style={{
+          backgroundImage:
+            'linear-gradient(210.45deg, rgba(0, 54, 140, 0.95) -2.14%, rgba(48, 148, 241, 0.95) 115.12%), url(' +
+            `${imageUrlFor(buildImageObj(myInfo.coverImage))}` +
+            ')'
+        }}
+      >
         <Header myInfo={myInfo} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
       </div>
       <div className={styles.navContainer}>
@@ -42,8 +52,8 @@ const Layout = ({ children, myInfo, onHideNav, onShowNav, showNav }) => (
             <div className={styles.footerWrapper}>
               <div className={styles.siteInfo}>
                 <div>
-                  Copyright © {new Date().getFullYear()} {myInfo.shortName}
-                  {' '}{myInfo.lastName}. All&nbsp;rights&nbsp;reserved.
+                  Copyright © {new Date().getFullYear()} {myInfo.shortName} {myInfo.lastName}.
+                  All&nbsp;rights&nbsp;reserved.
                 </div>
                 <div>
                   Built by <a href='https://paul.hanaoka.co'>Big Brother</a> with&nbsp;{''}
