@@ -22,7 +22,7 @@
       @nest & .arrow {
         transform: translateX(0.2rem);
         color: var(--color-accent);
-        transition: 0.5s all 0.8s cubic-bezier(0, 1.6, 0.6, 1.8);
+        transition: 0.5s all cubic-bezier(0, 1.6, 0.6, 1.8) 0.4s;
       }
     }
   }
@@ -43,7 +43,7 @@
 .seeMoreLinks {
   opacity: 0;
   transform: translateX(-0.5rem);
-  transition: 0.2s all 0.4s ease-in-out;
+  transition: 0.2s all 0.3s ease-in-out 0.3s;
   font-size: 1.5rem;
   margin: initial initial 2rem -0.2rem;
   color: var(--color-black);
@@ -51,7 +51,7 @@
     vertical-align: middle;
     color: var(--color-neutral-7);
     transform: translateX(0);
-    transition: 0.4s transform 0.4s ease-in-out;
+    transition: 0.4s transform ease-in-out 0.4s;
   }
 }
 
