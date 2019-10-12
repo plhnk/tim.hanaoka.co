@@ -44,6 +44,9 @@
   @media (--media-min-medium) {
     grid-area: 2 / 2 / 3 / 3;
   }
+  @media (--media-max-medium) {
+    min-height: 66vh;
+  }
 }
 
 .footerContainer {
@@ -59,6 +62,12 @@ footer {
       justify-content: space-between;
       font-style: italic;
       color: var(--color-neutral-5);
+      @media (--media-max-medium) {
+        flex-direction: column;
+        @nest & div {
+          margin: 0.5rem 0;
+        }
+      }
     }
   }
 }
