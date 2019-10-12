@@ -9,7 +9,7 @@ import { imageUrlFor } from '../lib/image-url'
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
-const Layout = ({ children, myInfo, onHideNav, onShowNav, showNav }) => (
+const Layout = ({ children, myInfo, onHideNav, onShowNav, showNav, smallNav }) => (
   <>
     <Helmet>
       <link
@@ -28,7 +28,7 @@ const Layout = ({ children, myInfo, onHideNav, onShowNav, showNav }) => (
             ')'
         }}
       >
-        <Header myInfo={myInfo} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
+        <Header smallNav={smallNav} myInfo={myInfo} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
       </div>
       <div className={styles.navContainer}>
         <nav className={styles.nav}>
