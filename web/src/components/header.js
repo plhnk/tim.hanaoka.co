@@ -3,7 +3,7 @@ import Icon from './icons'
 import Link from './link.js'
 import { buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
-import MediaQuery, { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive'
 
 import styles from './header.module.css'
 
@@ -12,36 +12,22 @@ const Header = ({ myInfo, smallNav }) => {
 
   return (
 
-    <div className={styles.root}>
+    <div className={isTabletOrMobile && smallNav ? styles.mobileSmallNav : styles.root}>
       <div className={styles.wrapper}>
         <div className={styles.headshotWrapper}>
-          {smallNav && isTabletOrMobile ? (
-            <MediaQuery maxWidth={800}>
-              <img
-                src={imageUrlFor(buildImageObj(myInfo.headshot))
-                  .width(80)
-                  .height(80)
-                  .fit('crop')
-                  .url()}
-                alt={myInfo.headshot.alt}
-                className={styles.headshot}
-              />
-            </MediaQuery>
-          ) : (
-            <img
-              src={imageUrlFor(buildImageObj(myInfo.headshot))
-                .width(160)
-                .height(160)
-                .fit('crop')
-                .url()}
-              alt={myInfo.headshot.alt}
-              className={styles.headshot}
-            />
-          )}
+          <img
+            src={imageUrlFor(buildImageObj(myInfo.headshot))
+              .width(160)
+              .height(160)
+              .fit('crop')
+              .url()}
+            alt={myInfo.headshot.alt}
+            className={styles.headshot}
+          />
         </div>
         <Link to='/' className={styles.branding}>
           <h1>
-            <span className={styles.firstName}>{myInfo.firstName}</span>
+            <span className={styles.firstName}>{isTabletOrMobile && smallNav ? myInfo.shortName : myInfo.firstName}</span>
             {myInfo.lastName}
           </h1>
         </Link>

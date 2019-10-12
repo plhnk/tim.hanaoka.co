@@ -37,7 +37,7 @@ const ContactPage = props => {
   }
 
   return (
-    <Layout>
+    <Layout smallNav>
       <SEO title={page.title} />
       <Container>
         <h1 className={responsiveTitle1}>{page.title}</h1>
