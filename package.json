@@ -1,8 +1,12 @@
 {
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/plhnk/tim.hanaoka.co.git"
+  },
   "private": false,
-  "name": "example-company-website-gatsby-sanity-combo",
+  "name": "tim.hanaoka.co",
   "version": "1.0.0",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "Paul Hanaoka <paul@hanaoka.co>",
   "engines": {
     "node": "10.x"
   },
