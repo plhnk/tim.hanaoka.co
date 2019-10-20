@@ -1,6 +1,8 @@
-# A sample company website built with [Gatsby](https://www.gatsbyjs.org/) & [Sanity.io](https://www.sanity.io)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/83356698-0317-4472-bc33-2f4aa7bacfc1/deploy-status)](https://app.netlify.com/sites/dazzling-mccarthy-03c22b/deploys)
 
-This examples combines [Gatsby](https://www.gatsbyjs.org/) site generation with [Sanity](https://www.sanity.io) content management in a neat little company website. Read [the blog post](https://www.sanity.io/blog/get-started-with-gatsby-and-structured-content) and [see the getting started video](https://www.youtube.com/watch?v=qU4lFYp3KiQ).
+# Tim Hanaoka's Portfolio Site
+
+_Based on Sanity's [example-company-website-gatsby-sanity-combo](https://github.com/sanity-io/example-company-website-gatsby-sanity-combo)._
 
 - [Features](#features)
 - [Installation](#installation)
@@ -13,13 +15,9 @@ This examples combines [Gatsby](https://www.gatsbyjs.org/) site generation with 
 - [Contributing](#contributing)
 - [License](#license)
 
-[![Watch a video about the company website built with Gatsby using Sanity.io as a headless CMS](https://cdn.sanity.io/images/3do82whm/production/4f652e6d114e7010aa633b81cbcb97c335980fc8-1920x1080.png?w=500)](https://www.youtube.com/watch?v=STtpXBvJmDA)
-
-[See the example up and running](https://www.youtube.com/watch?v=STtpXBvJmDA)
+**See the live site at [tim.hanaoka.co](https://tim.hanaoka.co)!**
 
 ## Features
-
-**A company website built with Gatsby**
 
 - 📡 Real-time content preview in development
 - ⏱ Fast & frugal builds
@@ -40,8 +38,8 @@ This examples combines [Gatsby](https://www.gatsbyjs.org/) site generation with 
 Read the [step-by-step blog post](https://www.sanity.io/blog/how-to-quickly-set-up-a-gatsby-js-jamstack-website-with-a-headless-cms).
 
 ```sh
-git clone git@github.com:sanity-io/example-company-website-gatsby-sanity-combo.git
-cd example-company-website-gatsby-sanity-combo
+git clone git@github.com:plhnk/tim.hanaoka.co.git
+cd tim.hanaoka.co
 npm install
 
 # Install or upgrade the Sanity CLI to
@@ -52,7 +50,7 @@ npm run init
 
 ```
 
-See the [getting started video](https://www.youtube.com/watch?v=qU4lFYp3KiQ) for a walkthrough of the installation.
+_See Sanity's [getting started video](https://www.youtube.com/watch?v=qU4lFYp3KiQ) for a walkthrough of the installation._
 
 ## Enable Gatsby watch mode for drafts
 
@@ -65,12 +63,6 @@ We have enabled the watch mode in the `gatsby-source-sanity` plugin, which means
 - Add your new token to the key: `SANITY_TOKEN="<token here>"`
 
 If you restart the local development server, it will now show unpublished changes from the Studio. Note that the `.env` file is ignored by Git, because the token gives access to unpublished content in the API.
-
-## Usage example
-
-This project demos Sanity.io with Gatsby using our [source plugin](https://www.gatsbyjs.org/packages/gatsby-source-sanity). It's a good starter for a simple company site, a portfolio site for an agency or a personal blog with an attached portfolio.
-
-We tried to strike a balance between a useful example and a minimal footprint to make it easier to iterate on design and content model. [Let us know](https://slack.sanity.io) should you have questions!
 
 ## Development setup
 
@@ -85,10 +77,8 @@ npm start
 
 ### Development workflow
 
-We wrote a [blog post](https://www.sanity.io/blog/get-started-with-gatsby-and-structured-content) about how to use this example, but if you would like to just start tinkering:
-
-- The Sanity Studio keeps its schemas in `./studio/schemas`. We will hot reload the editor when you edit them so just start experimenting. [Read more about our schemas here](https://www.sanity.io/docs/content-studio/the-schema).
-- We followed Gatsby conventions and [you can read all about them here](https://www.gatsbyjs.org/tutorial/).
+- The Sanity Studio keeps its schemas in `./studio/schemas`. The editor hot reloads when you edit them so just start experimenting. [Read more about schemas here](https://www.sanity.io/docs/content-studio/the-schema).
+- This follows Gatsby conventions and [you can read all about them here](https://www.gatsbyjs.org/tutorial/).
 - If you want Gatsby to not throw errors on missing fields for unpopulated data you need to redeploy the GraphQL API so we can generate schemas – `npm run graphql-deploy`
 
 ## Deployment
@@ -99,18 +89,16 @@ npm run graphql-deploy
 
 # Deploy the Sanity Studio to *.sanity.studio
 npm run sanity-deploy
-
-# Build & deploy to Zeit's Now. Remember to set `basePath` to "/studio" in sanity.json
-npm run now-deploy
 ```
 
-> **Deploy on Netlify:** If you want to deploy the Gatsby site to Netlify we added a netlify.toml config for you.
+> **Currently deployed on Netlify:**
+> Settings are in the `netlify.toml` config.
 >
-> Fork or clone the example to your GitHub account. After adding your repo to Netlify you’ll get automatic builds & deploys when pushing to master. You can also add a [webhook](https://www.sanity.io/docs/webhooks) to get deploys on content changes.
+> There's a [webhook](https://www.sanity.io/docs/webhooks) in place so there's a new deploy whenever content changes.
 
 ## Contributing
 
-1. [Fork it](https://https://github.com/sanity-io/example-company-website-gatsby-sanity-combo/fork)
+1. [Fork it](https://https://github.com/plhnk/tim.hanaoka.co/fork)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
