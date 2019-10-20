@@ -66,6 +66,12 @@ export default {
       title: 'Related projects',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'project' } }]
+    },
+    {
+      name: 'skills',
+      title: 'Applicable skills',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'skills' } }]
     }
   ],
   preview: {

@@ -1,8 +1,8 @@
-import S from '@sanity/desk-tool/structure-builder'
+import S from "@sanity/desk-tool/structure-builder";
 import { MdWeb, MdSettings } from "react-icons/md";
-import { FaRebel } from 'react-icons/fa'
+import { FaRebel } from "react-icons/fa";
 
-const hiddenTypes = ['category', 'myInfo', 'page', 'person', 'project', 'siteSettings']
+const hiddenTypes = ["category", "myInfo", "page", "person", "project", "resume", "education", "experience", "certifications", "skills", "siteSettings"];
 
 export default () =>
   S.list()
@@ -52,6 +52,55 @@ export default () =>
                     .id("contactPage")
                     .schemaType("page")
                     .documentId("contact")
+                )
+                .icon(MdWeb)
+            ])
+        ),
+      S.listItem()
+        .title("Resume")
+        .child(
+          S.list()
+            .title("Resume")
+            .items([
+              S.listItem()
+                .title("Resumes")
+                .schemaType("resume")
+                .child(S.documentTypeList("resume").title("Resumes"))
+                .icon(MdWeb),
+              S.listItem()
+                .title("Education")
+                .child(
+                  S.editor()
+                    .id("education")
+                    .schemaType("education")
+                    .documentId("education")
+                )
+                .icon(MdWeb),
+              S.listItem()
+                .title("Experience")
+                .child(
+                  S.editor()
+                    .id("experience")
+                    .schemaType("experience")
+                    .documentId("experience")
+                )
+                .icon(MdWeb),                
+              S.listItem()
+                .title("Certifications")
+                .child(
+                  S.editor()
+                    .id("certifications")
+                    .schemaType("certifications")
+                    .documentId("certifications")
+                )
+                .icon(MdWeb),
+              S.listItem()
+                .title("Skills")
+                .child(
+                  S.editor()
+                    .id("skills")
+                    .schemaType("skills")
+                    .documentId("skills")
                 )
                 .icon(MdWeb)
             ])
