@@ -1,8 +1,8 @@
 {
   "private": false,
-  "name": "example-company-website-gatsby-sanity-combo-studio",
+  "name": "tim.hanaoka.co-sanity-studio",
   "version": "1.0.0",
-  "author": "Sanity <hello@sanity.io>",
+  "author": "Paul Hanaoka <paul@hanaoka.co>",
   "engines": {
     "node": "10.x"
   },
