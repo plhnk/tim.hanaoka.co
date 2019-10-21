@@ -1,7 +1,7 @@
 export default {
   name: 'education',
   title: 'Education',
-  type: 'object',
+  type: 'document',
   fields: [
     {
       name: 'institution',
@@ -48,7 +48,7 @@ export default {
       location: 'location',
       degree: 'degree',
     },
-    prepare ({ title = 'No title', startDate, EndDate, location, degree }) {
+    prepare ({ title = 'No title', startDate, endDate, location, degree }) {
       return {
         title,
         subtitle: degree,

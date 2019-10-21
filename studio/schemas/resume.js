@@ -41,31 +41,31 @@ export default {
       name: "education",
       title: "Education",
       type: "array",
-      of: [{ type: "education" }]
+      of: [{ type: 'reference', to: [{type: "education"}] }]
     },
     {
       name: "experience",
       title: "Experience",
       type: "array",
-      of: [{ type: "experience" }]
+      of: [{ type: 'reference', to: [{type: "experience"}] }]
     },
     {
       name: "skills",
       title: "Skills",
       type: "array",
-      of: [{ type: "skills" }]
+      of: [{ type: 'reference', to: [{type: "skills"}] }]
     },
     {
       name: "references",
       title: "References",
       type: "array",
-      of: [{ type: "person" }]
+      of: [{ type:'reference', to: [{ type: "person"}] }]
     },
     {
       name: "certifications",
       title: "Certifications",
       type: "array",
-      of: [{ type: "certifications" }]
+      of: [{ type: 'reference', to: [{type: "certifications"}] }]
     },
     {
       name: "relatedProjects",

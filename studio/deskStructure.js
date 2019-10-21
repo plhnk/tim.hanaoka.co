@@ -69,38 +69,25 @@ export default () =>
                 .icon(MdWeb),
               S.listItem()
                 .title("Education")
-                .child(
-                  S.editor()
-                    .id("education")
-                    .schemaType("education")
-                    .documentId("education")
-                )
+                .schemaType("education")
+                .child(S.documentTypeList("education").title("Education"))
                 .icon(MdWeb),
               S.listItem()
                 .title("Experience")
-                .child(
-                  S.editor()
-                    .id("experience")
-                    .schemaType("experience")
-                    .documentId("experience")
+                .schemaType("experience")
+                .child(S.documentTypeList("experience").title("Experience")
                 )
                 .icon(MdWeb),                
               S.listItem()
                 .title("Certifications")
-                .child(
-                  S.editor()
-                    .id("certifications")
-                    .schemaType("certifications")
-                    .documentId("certifications")
+                .schemaType("certifications")
+                .child(S.documentTypeList("certifications").title("Certifications")
                 )
                 .icon(MdWeb),
               S.listItem()
                 .title("Skills")
-                .child(
-                  S.editor()
-                    .id("skills")
-                    .schemaType("skills")
-                    .documentId("skills")
+                .schemaType("skills")
+                .child(S.documentTypeList("skills").title("Skills")
                 )
                 .icon(MdWeb)
             ])
